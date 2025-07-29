@@ -13,7 +13,7 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
-/* ==========common============== */
+/* ====================================common============== */
 a {
   text-decoration: none;
 }
@@ -47,7 +47,22 @@ a {
   cursor: pointer;
   opacity: 0.9;
 }
-/* ============header============= */
+/* ẩn nội dung thừa trong phần thẻ head popular */
+.line-clamp {
+  display: -webkit-box;
+  line-clamp: var(--line-clamp, 1); /*khai báo biến line-clamp*/
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+/* reponsive khung khóa học để ko bị vỡ giao diện khi chữ quá dài */
+.break-all {
+  word-break: break-all;
+}
+/* ==================================header============= */
 .header {
   background: #fffcf4;
 }
@@ -106,7 +121,7 @@ a {
 .hero .body {
   display: flex;
 }
-/* =========== hero left=========== */
+/* ========================================== hero left=========== */
 .hero .media-block {
   position: relative;
   width: 48%;
@@ -165,7 +180,7 @@ a {
   font-weight: 600;
   line-height: 167%; /* 166.667% */
 }
-/* ==============hero right============ */
+/* =========================================hero right============ */
 .hero .content-block {
   width: 52%;
   padding-left: 130px;
@@ -240,7 +255,7 @@ a {
 .hero .stats strong:nth-child(2) {
   margin-left: 28px;
 }
-/* ============popular=============== */
+/* =============================================popular=============== */
 .popular {
   padding: 65px 0;
   margin-top: 135px;
@@ -284,6 +299,7 @@ a {
   margin-top: 55px;
 }
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
